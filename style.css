@@ -1,0 +1,798 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* nav section */
+.parent nav {
+    width: 100%;
+    background-color: #dbd7d7;
+    padding: 8px 0;
+}
+
+nav .content {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+nav .content .visit {
+    color: #88959F;
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    align-items: center;
+}
+
+button.city{
+    padding: 8px 16px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    color: #88959F;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.login {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #00B284;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.city:hover,
+button.login:hover {
+    background-color: #45a049;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+
+    nav .content .visit {
+        display: none;
+    }
+
+    button.city,
+    button.login {
+        margin-top: 10px;
+    }
+}
+
+
+
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+
+.side-panel {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+
+.side-panel .panel-content {
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .menu-icon {
+        display: block;
+    }
+}
+
+
+
+/* hero section */
+
+.hero {
+    position: relative;
+    background-image: url('./images/Hero.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero .hero-contain {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 100px;
+    align-items: center;
+}
+
+.hero .hero-contain h1 {
+    font-size: 2em;
+}
+
+.hero .hero-contain p {
+    font-size: 1em;
+}
+
+.hero .hero-contain .ride {
+    background-color: white;
+    padding: 35px 30px;
+    border-radius: 10px;
+    color: #111;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.hero .hero-contain .ride .details {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+
+}
+
+@media screen and (max-width: 768px) {
+    .hero .hero-contain {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .hero .hero-contain h1 {
+        font-size: 1.5em;
+    }
+
+    .hero .hero-contain p {
+        font-size: 0.9em;
+    }
+
+    .hero .hero-contain .ride {
+        width: 100%;
+        padding: 20px;
+    }
+
+
+
+    .venue .select {
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero .hero-contain h1 {
+        font-size: 1.2em;
+    }
+
+    .hero .hero-contain p {
+        font-size: 0.8em;
+    }
+
+    .hero .hero-contain {
+        margin-right: 40px;
+
+    }
+}
+
+
+.venue .select {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.venue .select {
+    color: gray;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 12px;
+    padding: 10px 10px;
+    background-color: white;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.venue select {
+
+    border: none;
+    color: gray;
+}
+
+.venue .select .mid-border {
+    border-right: 2px solid gray;
+    margin: 0;
+    padding: 0;
+    height: 20px;
+}
+
+
+.ride .search-btn {
+    width: 100%;
+    background-color: #FF7A00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    padding: 10px 0;
+}
+
+
+
+
+
+/* bike section start */
+
+.parent .bike-header {
+    margin: 100px 0;
+    text-align: start;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+
+}
+
+.parent .bike-header .bike-details h2 {
+    font-weight: 500;
+}
+
+
+.bike-header .bike-details .p-small {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.bike-header .dots {
+    text-align: start;
+    margin-top: 20px;
+}
+
+.bike-header .dots .dot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.bike-header .dots .dot.active {
+    background-color: #717171;
+}
+
+
+
+
+/* milestone section */
+
+
+.parent .milestone-main {
+    background-color: #F7F7F3;
+    padding: 55px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    margin-bottom: 100px;
+    /* text-align: center; */
+}
+
+.parent .milestone-main .m-parent .stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.m-parent pa {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+.orange {
+    color: #FF7A00;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.orange span {
+    color: #5C2C01;
+    font-size: 15px;
+}
+
+.m-parent .stats .m-details {
+    font-size: 15px;
+    font-weight: 400;
+
+}
+
+
+
+
+
+/* bike cards section
+ */
+.bike-card-section {
+    margin: 20px;
+}
+
+.bike-card-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-content h3 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 500;
+
+    font-family: Inter;
+}
+
+.header-content p {
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+}
+
+.bike-card p {
+    color: #FF7A00;
+}
+
+.filter-btn {
+    padding: 8px;
+    color: #88959F;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bike-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Align cards to the start */
+    gap: 20px;
+}
+
+.bike-card {
+    width: 300px;
+    height: 350px;
+    /* border: 1px solid #ddd; */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 2px 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.bike-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.bike-card h2 {
+    margin: 10px 0;
+}
+
+.bike-card .availability-link {
+    color: white;
+    text-decoration: none;
+    background-color: #00B284;
+    padding: 8px 15px;
+    border-radius: 5px;
+    width: 149px;
+    margin-top: 10px;
+}
+
+.bike-card .availability-link:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+/* bike wash section */
+.wash-section {
+    padding: 20px;
+    margin-top: 70px;
+}
+
+.wash-main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.bike-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+}
+
+.bike-image-col,
+.bike-info-col {
+    flex: 1;
+    max-width: 50%;
+}
+
+.bike-image-col {
+    text-align: center;
+}
+
+.bike-image-col img {
+    max-width: 90%;
+    height: auto;
+}
+
+.bike-details {
+    padding: 20px;
+}
+
+.bike-info-title {
+    color: #5C2C01;
+    margin-bottom: 10px;
+}
+
+.bike-info-heading {
+    color: black;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.bike-info-description {
+    color: black;
+    margin-bottom: 20px;
+}
+
+.bike-info-list {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    text-align: center;
+    justify-content: start;
+    margin-left: 16px;
+}
+
+.bike-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.feature-text {
+    color: #333;
+    font-size: 14px;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .bike-image-col,
+    .bike-info-col {
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+/* app download section */
+/* used reuseable wash section properties */
+
+.wash-section .app-download .download-flex {
+    justify-content: space-between;
+    gap: 130px;
+}
+
+
+.wash-section .app-download .download-flex .bike-info-col .download-images {
+    gap: 0px;
+    align-items: center;
+    /* justify-content: center; */
+    display: flex;
+}
+
+
+@media screen and (max-width: 768px) {
+    .wash-section .app-download .download-flex {
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
+
+
+
+
+
+
+
+/* Rent section */
+.rent-section .rent-section-main {
+    /* position: relative; */
+    background-image: url('./images/rent-bg.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin: 60px;
+    border-radius: 15px;
+}
+
+.rent-section .rent-section-main .rent-data {
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+
+
+.rent-section .rent-section-main .rent-data div h2 {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 157.188%;
+    /* 56.588px */
+    margin-top: 0;
+}
+
+
+.rent-section .rent-section-main .rent-data div .dots {
+    text-align: start;
+    margin-top: 15px;
+}
+
+.rent-section .rent-section-main .rent-data div .dots .dot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 0px;
+    cursor: pointer;
+}
+
+.rent-section .rent-section-main .rent-data div .dots .dot.active {
+    background-color: #FF7A00;
+}
+
+
+.rent-features div .first-div {
+    display: flex;
+    gap: 3px;
+    font-weight: 400;
+    font-size: 16px;
+    align-items: center;
+}
+
+.rent-data button{
+    background-color: #FF7A00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+.rent-features{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .rent-section .rent-section-main {
+        flex-wrap: wrap-reverse;
+        margin: 10px;
+    }
+
+    .rent-section .rent-section-main .rent-img img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+/* Faq section */
+.faq-container {
+    margin: 20px;
+    padding: 14px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.faq-item {
+    border-bottom: 1px solid gray;
+    width: 430px;
+    /* margin-top: 10px; */
+
+}
+
+.faq-item summary {
+    cursor: pointer;
+    font-weight: 400;
+    padding: 10px;
+    position: relative;
+}
+
+.FAQss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.faq-item summary::after {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-container div details {
+    margin-top: 20px;
+
+}
+
+.faq-item p {
+    padding: 0 10px 10px 10px;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* footer start */
+.footer {
+    background-color: #F3F3F3;
+    color: #5C2C01;
+    padding: 50px 0;
+    font-size: 14px;
+}
+
+.footer-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+}
+
+.footer-section h5 {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: #75787B;
+    text-decoration: none;
+}
+
+.footer-section ul li {
+    margin-top: 15px;
+
+}
+
+.footer-section ul li a:hover {
+    color: blue;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    color: #707070;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        justify-content: start;
+    }
+
+    .footer-section {
+        flex-basis: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+}
