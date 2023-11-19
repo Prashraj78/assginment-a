@@ -892,7 +892,7 @@ button.login:hover {
 
 @media screen and (max-width: 768px) {
     .img-mobile-download img {
-        width: 341px;
+        width: 300px;
         height: auto;
     }
 }
