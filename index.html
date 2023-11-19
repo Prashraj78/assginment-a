@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acheivee</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -24,10 +23,22 @@
 
 
                 </div>
-                <div>
-                    <button class="city">banglore</button>
-                    <button class="login">login</button>
+                <div class="contact-login">
+                    <p class="phone-number">+91 8880-570-570</p>
+                    <div class="buttons">
+
+                        <select class="city-select">
+
+                            <option value="bangalore">Bangalore</option>
+                            <option value="bangalore">Pune</option>
+                            <option value="bangalore">Mumbai</option>
+                            <option value="bangalore">Jalgaon</option>
+                            <!-- Other city options here -->
+                        </select>
+                        <button class="login">Login</button>
+                    </div>
                 </div>
+
                 <span class="menu-icon" onclick="openNav()">☰</span>
             </div>
         </nav>
@@ -49,75 +60,92 @@
         <div class="hero">
             <div class="hero-contain">
                 <div>
-                    <h1>Rent top bikes for<br /> your next ride</h1>
-                    <p>World-class wealth management using science, data<br /> and technology, leveraged by our
+                    <h1>Rent top bikes for<br /> your <strong>next ride</strong> </h1>
+                    <p class="data-div">World-class wealth management using science, data<br /> and technology,
+                        leveraged by our
                         experience, and<br /> human touch.</p>
                 </div>
                 <div class="ride">
                     <div class="details">
-                        <div>
-                            <img src="./images/bike1.svg" alt="">
+                        <button class="tab" onclick="changeTab(event, 'ElectricBikes')">
+                            <img src="./images/bike1.svg" alt="Electric Bikes">
                             <p>Electric<br />Bikes</p>
-                        </div>
-                        <div>
-                            <img src="./images/bike2.svg" alt="">
+                        </button>
+                        <button class="tab" onclick="changeTab(event, 'CommuteBikes')">
+                            <img src="./images/bike3.svg" alt="Commute Bikes" class="">
+
                             <p>Commute<br />Bikes</p>
-                        </div>
-                        <div>
-                            <img src="./images/bike2.svg" alt="">
+                        </button>
+                        <button class="tab" onclick="changeTab(event, 'PremiumBikes')">
+                            <img src="./images/bike2.svg" alt="Premium Bikes">
                             <p>Premium<br />Bikes</p>
-                        </div>
+                        </button>
                     </div>
-                    <div class="venue">
-                        <div>
-                            <p>Location</p>
-                            <div class="select">
-                                <select class="city-select">
-                                    <option value="">Select City</option>
-                                    <!-- Add other city options here -->
-                                </select>
-                                <div class="mid-border"></div>
-                                <select class="location-select">
-                                    <option value="">Select Location</option>
-                                    <!-- Add location options here based on selected city -->
-                                </select>
+
+                    <!-- Content for each tab -->
+                    <div id="ElectricBikes" class="tab-content">
+                        <!-- Content for Electric Bikes -->
+
+                        <div class="venue">
+                            <div>
+                                <p>Location</p>
+                                <div class="select">
+                                    <select class="city-select border-left">
+                                        <option value="">Select City</option>
+                                        <!-- Add other city options here -->
+                                    </select>
+                                    <!-- <div class="mid-border"></div> -->
+                                    <select class="location-select border-right">
+                                        <option value="">Select Location</option>
+                                        <!-- Add location options here based on selected city -->
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="venue">
-                        <div>
-                            <p>Pickup</p>
-                            <div class="select">
-                                <select class="city-select">
-                                    <option value="">Select Date</option>
-                                    <!-- Add other city options here -->
-                                </select>
-                                <div class="mid-border"></div>
-                                <select class="location-select">
-                                    <option value="">Select Time</option>
-                                    <!-- Add location options here based on selected city -->
-                                </select>
+                        <div class="venue">
+                            <div>
+                                <p>Pickup</p>
+                                <div class="select">
+                                    <select class="city-select border-left">
+                                        <option value="">Select Date</option>
+                                        <!-- Add other city options here -->
+                                    </select>
+                                    <div class="mid-border"></div>
+                                    <select class="location-select border-right">
+                                        <option value="">Select Time</option>
+                                        <!-- Add location options here based on selected city -->
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="venue">
-                        <div>
-                            <p>Drop</p>
-                            <div class="select">
-                                <select class="city-select">
-                                    <option value="">Select Date</option>
-                                    <!-- Add other city options here -->
-                                </select>
-                                <div class="mid-border"></div>
-                                <select class="location-select">
-                                    <option value="">Select Time</option>
-                                    <!-- Add location options here based on selected city -->
-                                </select>
+                        <div class="venue">
+                            <div>
+                                <p>Drop</p>
+                                <div class="select">
+                                    <select class="city-select border-left">
+                                        <option value="">Select Date</option>
+                                        <!-- Add other city options here -->
+                                    </select>
+                                    <div class="mid-border"></div>
+                                    <select class="location-select border-right">
+                                        <option value="">Select Time</option>
+                                        <!-- Add location options here based on selected city -->
+                                    </select>
+                                </div>
                             </div>
                         </div>
+                        <!-- button -->
+                        <button class="search-btn">Search your ride</button>
                     </div>
-                    <!-- button -->
-                    <button class="search-btn">Search your ride</button>
+                    <div id="CommuteBikes" class="tab-content" style="display: none;">
+                        <!-- Content for Commute Bikes -->
+                        CommuteBikes section
+                    </div>
+                    <div id="PremiumBikes" class="tab-content" style="display: none;">
+                        <!-- Content for Premium Bikes -->
+                        PremiumBikes section
+                    </div>
+
 
                 </div>
             </div>
@@ -125,22 +153,60 @@
         </div>
         <!-- hero section ends here -->
         <!-- bike section -->
+
         <div class="bike-header">
-            <img src="./images/bike.png" alt="" height="220px" width="450px">
-            <div class="bike-details">
+            <div class="slider">
+                <!-- Slides (Images) -->
+                <img src="./images/bike.png" alt="Bike 1" class="slide active-slide">
+                <img src="./images/bike.png" alt="Bike 2" class="slide">
+                <img src="./images/bike.png" alt="Bike 3" class="slide">
+                <img src="./images/bike.png" alt="Bike 4" class="slide">
+            </div>
+
+            <div>
                 <div class="dots">
-                    <span class="dot active"></span> <!-- Active dot -->
+                    <span class="dot active"></span>
                     <span class="dot"></span>
                     <span class="dot"></span>
                     <span class="dot"></span>
                 </div>
-                <p class="p-small">Why people love Bykemania?</p>
-                <h2>Well maintained</h2>
-                <p>
-                    Our bikes maintained so well you will feel<br />they are brand new!
-                </p>
+                <div class="details-container">
+                    <div class="bike-details active-details">
+                        <!-- Details for Bike 1 -->
+                        <p class="p-small">Why people love Bykemania?</p>
+                        <h2>Well maintained</h2>
+                        <p class="p-para">Our bikes maintained so well you will feel<br />they are brand new!</p>
+                    </div>
+                    <div class="bike-details">
+                        <!-- Details for Bike 2 -->
+                        <p class="p-small">Why people love Bike 2</p>
+                        <h2>Well maintained Bike 2</h2>
+                        <p class="p-para">Details about Bike 2...</p>
+                    </div>
+                    <div class="bike-details">
+                        <!-- Details for Bike 3 -->
+                        <p class="p-small">Why people love Bike 3</p>
+                        <h2>Well maintained Bike 3</h2>
+                        <p class="p-para">Details about Bike 3...</p>
+                    </div>
+                    <div class="bike-details">
+                        <!-- Details for Bike 4 -->
+                        <p class="p-small">Why people love Bike 4</p>
+                        <h2>Well maintained Bike 4</h2>
+                        <p class="p-para">Details about Bike 4...</p>
+                    </div>
+
+                </div>
             </div>
+
         </div>
+
+
+
+
+
+
+        <!-- milestone section -->
 
         <div class="milestone-main">
             <div class="m-parent">
@@ -148,41 +214,32 @@
                 <pa> Our key milestones </pa>
                 <div class="stats">
                     <div>
-                        <p class="orange">
-                            250000<span>+</span>
-                        </p>
+                        <p class="orange" data-target="250000">0<span>+</span></p>
                         <p class="m-details">
                             Kms and running
                         </p>
                     </div>
                     <div>
-                        <p class="orange">
-                            5750<span>+</span>
-                        </p>
+
+                        <p class="orange" data-target="5750">0<span>+</span></p>
                         <p class="m-details">
                             No of Customers served
                         </p>
                     </div>
                     <div>
-                        <p class="orange">
-                            1200<span>+</span>
-                        </p>
+                        <p class="orange" data-target="1200">0<span>+</span></p>
                         <p class="m-details">
                             Fleet size
                         </p>
                     </div>
                     <div>
-                        <p class="orange">
-                            2500<span>+</span>
-                        </p>
+                        <p class="orange" data-target="2500">0<span>+</span></p>
                         <p class="m-details">
                             App downloads
                         </p>
                     </div>
                     <div>
-                        <p class="orange">
-                            4.5<span>+</span>
-                        </p>
+                        <p class="orange" data-target="4.5">0<span>+</span></p>
                         <p class="m-details">
                             Google rating
                         </p>
@@ -199,14 +256,29 @@
                     <h3>Customer Favourites</h3>
                     <p>Bikes that are trending this month 🔥</p>
                 </div>
-                <button class="filter-btn">Filter by</button>
+
+                <select class="filter-select">
+                    <option value="" disabled selected>Filter By</option>
+                    <option value="High-to-low">High-to-low</option>
+                    <option value="Low-to-high">Low-to-high</option>
+                    <option value="Popular">Popular</option>
+                    <!-- Other city options here -->
+                </select>
+
+
+
             </div>
             <div class="bike-card-container">
                 <div class="bike-card">
                     <img src="./images/cardBike1.png" alt="Honda Aviator" />
-                    <h2>Honda Aviator</h2>
-                    <p>₹ 400 per day</p>
-                    <a href="#" class="availability-link">Check Availability</a>
+
+                    <div>
+
+                        <h2 class="honda-a">Honda Aviator</h2>
+                        <p class="honda-a">₹ 400 per day</p>
+                        <a href="#" class="availability-link" class="honda-a">Check Availability</a>
+                    </div>
+
                 </div>
 
                 <div class="bike-card">
@@ -225,9 +297,12 @@
 
                 <div class="bike-card">
                     <img src="./images/cardBike4.png" alt="Honda Aviator" />
-                    <h2>Honda Aviator</h2>
-                    <p>₹ 400 per day</p>
-                    <a href="#" class="availability-link">Check Availability</a>
+                    <div>
+
+                        <h2 class="honda-a">Honda Aviator</h2>
+                        <p class="honda-a">₹ 400 per day</p>
+                        <a href="#" class="availability-link" class="honda-a">Check Availability</a>
+                    </div>
                 </div>
 
                 <div class="bike-card">
@@ -258,20 +333,20 @@
                     <div class="bike-info-col">
                         <div class="bike-details">
                             <h5 class="bike-info-title">The Bykemania Advantage</h5>
-                            <h2 class="bike-info-heading">Top Bikes, Every Time!</h2>
+                            <h2 class="bike-info-heading">Top bikes, everytime!</h2>
                             <p class="bike-info-description">Our bikes are maintained so well you will feel<br />they
                                 are brand new!</p>
                             <div class="bike-info-list">
-                                <div class="bike-feature">
+                                <div class="bike-feature Always-ins">
                                     <img src="./images/wash1.svg" alt="Sanitised Bikes" class="feature-img">
                                     <p class="feature-text">Sanitised<br />Bikes</p>
                                 </div>
                                 <div class="bike-feature">
-                                    <img src="./images/wash2.svg" alt="Latest Models" class="feature-img">
+                                    <img src="./images/wash3.svg" alt="Latest Models" class="feature-img">
                                     <p class="feature-text">Latest<br />Models</p>
                                 </div>
-                                <div class="bike-feature">
-                                    <img src="./images/wash3.svg" alt="Always Insured" class="feature-img">
+                                <div class="bike-feature Always-ins">
+                                    <img src="./images/wash2.svg" alt="Always Insured" class="feature-img">
                                     <p class="feature-text">Always<br />Insured</p>
                                 </div>
                             </div>
@@ -291,7 +366,7 @@
         <section class="wash-section">
             <div class="wash-main app-download ">
                 <div class="bike-line download-flex ">
-                    <div class="bike-image-col">
+                    <div class="bike-image-col img-mobile-download">
                         <img src="./images/app-download.png" alt="app-store" class="">
                     </div>
                     <div class="bike-info-col">
@@ -304,11 +379,11 @@
 
                         </div>
                         <div class="bike-info-list download-images ">
-                            <div class="bike-feature play-store-img ">
-                                <img src="./images/play-store.png" alt="play-store" class="feature-img">
+                            <div class=" play-store-img ">
+                                <img src="./images/play-store.png" alt="play-store">
                             </div>
-                            <div class="bike-feature app-store-img ">
-                                <img src="./images/app-store.png" alt="app-store" class="feature-img">
+                            <div class=" app-store-img ">
+                                <img src="./images/app-store.png" alt="app-store">
                             </div>
 
                         </div>
@@ -348,7 +423,7 @@
 
                         </div>
                         <div>
-                            
+
                             <div class="first-div">
                                 <img src="./images/4f.svg" alt="">
                                 <p>Swapable battery</p>
@@ -373,94 +448,120 @@
 
 
         <!-- FAQs section -->
-        <div>
+        <div class="faq-div">
             <h4 class="FAQss">Frequently asked questions</h4>
-
             <div class="faq-container">
-                <div>
-                    <details class="faq-item">
-                        <summary>Is fuel included in the tariff?</summary>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is fuel included in the tariff?
+                        <span class="arrow down"></span>
+                    </div>
+                    <div class="faq-answer">
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, vel.</p>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>What all documents are needed to book a vehicle?</summary>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, vel.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>Can I cancel my booking?</summary>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, vel.</p>
-                    </details>
+                    </div>
                 </div>
-                <div>
-                    <details class="faq-item">
-                        <summary>Will I get complimentary helmet?</summary>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What all documents are needed to book a vehicle?
+                        <span class="arrow down"></span>
+                    </div>
+                    <div class="faq-answer">
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, vel.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>What is the minimum or maximum rental period?</summary>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, vel.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>Is it possible to extend the ride beyond the booking horizon?</summary>
-                        <p>It is possible to extend the booking using our app and website. Extension will be only
-                            possible if vehicle is available for the slected timings.</p>
-                    </details>
-
+                    </div>
                 </div>
-                <!-- Add more FAQ items as needed -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I cancel my booking?
+                        <span class="arrow down"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, vel.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Will I get complimentary helmet?
+                        <span class="arrow down"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, vel.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is the minimum or maximum rental period?
+                        <span class="arrow down"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, vel.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is it possible to extend the ride beyond the booking horizon?
+                        <span class="arrow down"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, vel.</p>
+                    </div>
+                </div>
+                <!-- Repeat for other FAQ items -->
             </div>
         </div>
 
 
 
+
         <!-- footer section -->
         <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h5>Quick Links</h5>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Tariff</a></li>
-                        <li><a href="#">Rent Accessories</a></li>
-                        <li><a href="#">Buy Bikes</a></li>
-                    </ul>
+            <div>
+
+                <div class="footer-container">
+                    <div class="footer-section">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Tariff</a></li>
+                            <li><a href="#">Rent Accessories</a></li>
+                            <li><a href="#">Buy Bikes</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h5>Policies</h5>
+                        <ul>
+                            <li><a href="#">Terms and conditions</a></li>
+                            <li><a href="#">Privacy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h5>Company</h5>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h5>Deals</h5>
+                        <ul>
+                            <li><a href="#">Offers</a></li>
+                            <li><a href="#">Dealbox</a></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="footer-section">
-                    <h5>Policies</h5>
-                    <ul>
-                        <li><a href="#">Terms and conditions</a></li>
-                        <li><a href="#">Privacy</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h5>Company</h5>
-                    <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h5>Deals</h5>
-                    <ul>
-                        <li><a href="#">Offers</a></li>
-                        <li><a href="#">Dealbox</a></li>
-                    </ul>
+                <div class="footer-bottom">
+                    <p>&copy;2021 Copyright: Bykemania solutions pvt ltd</p>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <p>&copy;2021 Copyright: Bykemania solutions pvt ltd</p>
-            </div>
         </footer>
 
 
     </div>
 
-    </div>
     <script src="srcipt.js"></script>
 </body>
 
